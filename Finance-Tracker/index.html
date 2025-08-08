@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Finance Tracker</h1>
+
+        <div class="balance">
+            <h2>Your Balance</h2>
+            <p id="balance">PHP0.00</p>
+        </div>
+
+        <div class="summary">
+            <div>
+                <h3>Income</h3>
+                <p id="income" class="income">+PHP0.00</p>
+            </div>
+            <div>
+                <h3>Expense</h3>
+                <p id="expense" class="expense">-PHP0.00</p>
+            </div>
+        </div>
+
+        <div class="transaction-form">
+            <input type="text" id="description" placeholder="Enter description">
+            <input type="number" id="amount" placeholder="Enter amount">
+            <button id="addTransaction">Add Transaction</button>
+        </div>
+
+        <h3>Transaction History</h3>
+        <ul id="transactionList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

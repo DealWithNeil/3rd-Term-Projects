@@ -1,0 +1,155 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.container {
+    background: rgba(31, 31, 31, 0.98);
+    padding: 30px 24px 24px 24px;
+    border-radius: 18px;
+    width: 370px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: box-shadow 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.45);
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.balance {
+    margin: 18px 0;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(90deg, #232526 0%, #2b2b2b 100%);
+    padding: 14px 0;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.income {
+    color: #7CFC98;
+    font-weight: 600;
+}
+
+.expense {
+    color: #FF7C7C;
+    font-weight: 600;
+}
+
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.transaction-form input, .transaction-form button {
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
+.transaction-form input {
+    background: #232526;
+    color: #f5f5f5;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+}
+
+.transaction-form input:focus {
+    background: #2b2b2b;
+    box-shadow: 0 2px 8px rgba(76,175,80,0.08);
+}
+
+.transaction-form button {
+    background: linear-gradient(90deg, #4CAF50 0%, #43e97b 100%);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(76,175,80,0.10);
+    letter-spacing: 1px;
+}
+
+.transaction-form button:hover {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    box-shadow: 0 4px 16px rgba(67,233,123,0.15);
+}
+
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    background: linear-gradient(90deg, #232526 0%, #2b2b2b 100%);
+    padding: 12px 14px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+li:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 4px 16px rgba(67,233,123,0.10);
+}
+
+li.income {
+    border-left: 5px solid #7CFC98;
+}
+
+li.expense {
+    border-left: 5px solid #FF7C7C;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #bbb;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.delete-btn:hover {
+    color: #ff5252;
+    transform: scale(1.2) rotate(-10deg);
+}
