@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JournalApp — Daily Journal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <aside class="sidebar">
+      <header class="brand">
+        <h1>Journal<span>App</span></h1>
+        <button id="newEntryBtn" class="btn small">+ New</button>
+      </header>
+
+      <section class="controls">
+        <input id="searchInput" type="search" placeholder="Search entries or tags..." />
+        <div class="filters">
+          <select id="moodFilter">
+            <option value="">All moods</option>
+            <option value="happy">😊 Happy</option>
+            <option value="neutral">😐 Neutral</option>
+            <option value="sad">😔 Sad</option>
+          </select>
+          <input id="tagFilter" placeholder="#tag filter (comma separated)" />
+        </div>
+      </section>
+
+      <section class="entriesList" id="entriesList" aria-label="Journal entries"></section>
+
+      <footer class="sidebar-foot">
+        <div class="small-actions">
+          <button id="exportBtn" class="btn ghost">Export</button>
+          <label class="btn upload">
+            Import
+            <input id="importFile" type="file" accept="application/json" hidden>
+          </label>
+        </div>
+        <div class="copy">
+          <small>Local only — stored in your browser.</small>
+        </div>
+      </footer>
+    </aside>
+
+    <main class="main">
+      <div class="editor">
+        <div class="meta">
+          <input id="titleInput" placeholder="Title" />
+          <div class="meta-right">
+            <input id="dateInput" type="date" />
+            <select id="moodInput">
+              <option value="">Mood</option>
+              <option value="happy">😊 Happy</option>
+              <option value="neutral">😐 Neutral</option>
+              <option value="sad">😔 Sad</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <button class="btn mini" data-action="bold">B</button>
+          <button class="btn mini" data-action="italic">I</button>
+          <button class="btn mini" data-action="h1">H1</button>
+          <button class="btn mini" data-action="bullet">• List</button>
+          <input id="tagsInput" placeholder="#tags (comma separated)" />
+        </div>
+
+        <textarea id="contentInput" placeholder="Write your entry... (autosaves)"></textarea>
+
+        <div class="editor-actions">
+          <div class="left">
+            <button id="saveBtn" class="btn">Save</button>
+            <button id="deleteBtn" class="btn danger">Delete</button>
+          </div>
+          <div class="right">
+            <button id="previewBtn" class="btn ghost">Preview</button>
+            <button id="clearBtn" class="btn ghost">Clear</button>
+          </div>
+        </div>
+
+        <div id="previewPane" class="preview" hidden></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
