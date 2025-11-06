@@ -9,3 +9,22 @@
 <body>
   <main class="container">
     <h1 class="app-title">Clock & Countdown</h1>
+    <!-- Digital Clock -->
+    <section class="card">
+      <h2>Digital Clock</h2>
+      <div id="digital-clock" class="clock" aria-live="polite">00:00:00</div>
+      <div class="clock-sub">
+        <span id="clock-date">—</span>
+        <span id="clock-tz" class="muted">Local time</span>
+      </div>
+      <div class="controls-row">
+        <label>
+          <input type="checkbox" id="toggle-24" />
+          24-hour
+        </label>
+        <label>
+          <input type="checkbox" id="show-seconds" checked />
+          Show seconds
+        </label>
+      </div>
+    </section>
