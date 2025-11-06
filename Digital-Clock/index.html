@@ -9,6 +9,7 @@
 <body>
   <main class="container">
     <h1 class="app-title">Clock & Countdown</h1>
+
     <!-- Digital Clock -->
     <section class="card">
       <h2>Digital Clock</h2>
@@ -28,6 +29,7 @@
         </label>
       </div>
     </section>
+
     <!-- Countdown Timer -->
     <section class="card">
       <h2>Countdown Timer</h2>
@@ -41,3 +43,26 @@
           <label for="seconds">Seconds</label>
           <input id="seconds" type="number" min="0" max="59" value="0" />
         </div>
+
+<div class="field wide">
+          <label for="target-datetime">Or set target date/time</label>
+          <input id="target-datetime" type="datetime-local" />
+        </div>
+
+        <div class="field full">
+          <button id="start-btn" type="button" class="btn primary">Start</button>
+          <button id="pause-btn" type="button" class="btn" disabled>Pause</button>
+          <button id="reset-btn" type="button" class="btn" disabled>Reset</button>
+        </div>
+      </form>
+
+      <div class="timer-display" aria-live="polite" id="countdown-display">00:00:00</div>
+      <div id="countdown-status" class="muted">Ready</div>
+    </section>
+
+    <footer class="footer muted">Tip: Use the clock for quick reference and the countdown for timed tasks.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
